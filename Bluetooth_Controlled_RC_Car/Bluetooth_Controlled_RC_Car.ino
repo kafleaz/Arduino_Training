@@ -1,5 +1,6 @@
 #include <AFMotor.h>
 #include <SoftwareSerial.h>
+#include<Servo.h>
 
 AF_DCMotor m1(1); 
 AF_DCMotor m2(2); 
@@ -9,6 +10,7 @@ SoftwareSerial myserial(A0,A1); //A0=rx A1=tx
 
 char command;
 int speed1;
+servo ball
 
 void setup() {
   myserial.begin(9600);
@@ -225,8 +227,8 @@ void setSpeed(int speed)
 
 void f_l_setSpeed(int speed) //Front left speed set
 {
-  m1.setSpeed(150);
-  m2.setSpeed(150);
+  m1.setSpeed(100);
+  m2.setSpeed(100);
   m3.setSpeed(speed);
   m4.setSpeed(speed);
 }
@@ -235,22 +237,22 @@ void f_r_setSpeed(int speed) //Front right speed set
 {
   m1.setSpeed(speed);
   m2.setSpeed(speed);
-  m3.setSpeed(150);
-  m4.setSpeed(150);
+  m3.setSpeed(100);
+  m4.setSpeed(100);
 }
 
 void b_r_setSpeed(int speed) //Back right speed set
 {
   m1.setSpeed(speed);
   m2.setSpeed(speed);
-  m3.setSpeed(150);
-  m4.setSpeed(150);
+  m3.setSpeed(100);
+  m4.setSpeed(100);
 }
 
 void b_l_setSpeed(int speed) //Back left speed set
 {
-  m1.setSpeed(150);
-  m2.setSpeed(150);
+  m1.setSpeed(100);
+  m2.setSpeed(100);
   m3.setSpeed(speed);
   m4.setSpeed(speed);
 }
