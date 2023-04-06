@@ -10,20 +10,26 @@ SoftwareSerial myserial(A0,A1); //A0=rx A1=tx
 
 char command;
 int speed1;
-servo ball
+int angle=90;
+Servo myservo;
 
 void setup() {
+
   myserial.begin(9600);
   // put your setup code here, to run once:
   pinMode(A2, OUTPUT); // Front Light
   pinMode(A3, OUTPUT); // BAck Light
   pinMode(A4, OUTPUT); // Horn
+  myservo.attach(9);
+  
 
 }
 
 void loop() 
 {
+
   // put your main code here, to run repeatedly:
+  myservo.write(angle);
   if(myserial.available())
   {
     command = myserial.read();
@@ -128,6 +134,14 @@ void loop()
 
       case 'D':
         stop();
+        break;
+
+      case 'X':
+        angle=180;
+        break;
+
+      case 'x':
+        angle=90;
         break;
 
       default:
