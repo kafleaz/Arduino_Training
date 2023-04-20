@@ -169,7 +169,7 @@ void back(int speed)
   m4.run(BACKWARD);
 }
 
-void left(int speed)
+void right(int speed)
 {
   setSpeed(speed);
   m1.run(BACKWARD);
@@ -178,7 +178,7 @@ void left(int speed)
   m4.run(FORWARD);
 }
 
-void right(int speed)
+void left(int speed)
 {
   setSpeed(speed);
   m1.run(FORWARD);
@@ -239,34 +239,34 @@ void setSpeed(int speed)
   m4.setSpeed(speed);
 }
 
-void f_l_setSpeed(int speed) //Front left speed set
+void f_r_setSpeed(int speed) //Front left speed set
 {
-  m1.setSpeed(100);
-  m2.setSpeed(100);
+  m1.setSpeed(speed/3);
+  m2.setSpeed(speed/3);
   m3.setSpeed(speed);
   m4.setSpeed(speed);
 }
 
-void f_r_setSpeed(int speed) //Front right speed set
+void f_l_setSpeed(int speed) //Front right speed set
 {
   m1.setSpeed(speed);
   m2.setSpeed(speed);
-  m3.setSpeed(100);
-  m4.setSpeed(100);
+  m3.setSpeed(speed/3);
+  m4.setSpeed(speed/3);
 }
 
-void b_r_setSpeed(int speed) //Back right speed set
+void b_l_setSpeed(int speed) //Back right speed set
 {
   m1.setSpeed(speed);
   m2.setSpeed(speed);
-  m3.setSpeed(100);
-  m4.setSpeed(100);
+  m3.setSpeed(speed/3);
+  m4.setSpeed(speed/3);
 }
 
-void b_l_setSpeed(int speed) //Back left speed set
+void b_r_setSpeed(int speed) //Back left speed set
 {
-  m1.setSpeed(100);
-  m2.setSpeed(100);
+  m1.setSpeed(speed/3);
+  m2.setSpeed(speed/3);
   m3.setSpeed(speed);
   m4.setSpeed(speed);
 }
